@@ -127,6 +127,10 @@ class Script:
             return JUMP_BACKWARD
         if  distance >= -3:
             return JUMP_FORWARD
+        if  distance <= 1:
+            return JUMP_FORWARD
+        if  distance >= -1:
+            return JUMP_BACKWARD
     def get_attack_work(self, player, enemy):
         curr_hp = get_hp(enemy) 
         if curr_hp < self.past_hp_enemy:
